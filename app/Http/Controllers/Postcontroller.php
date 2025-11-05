@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class Postcontroller extends Controller
 {
     public function home() {
-        return "<h1>Welcome to my blog home page</h1>";
+        return view('templates.index');
     }
 
     public function detail($id) {
@@ -15,7 +15,7 @@ class Postcontroller extends Controller
     }
 
     public function oldUrl() {
-        return redirect('/new-url');
+        return redirect()->route('new-url');
     }
 
     public function newUrl() {
