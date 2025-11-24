@@ -11,7 +11,8 @@ class Postcontroller extends Controller
     }
 
     public function detail($id) {
-        return "<h1>Detailed blog page with parameter : ".$id." </h1>";
+        // return "<h1>Detailed blog page with parameter : ".$id." </h1>";
+        return view('templates.detail');
     }
 
     public function oldUrl() {
