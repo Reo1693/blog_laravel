@@ -8,7 +8,11 @@ class Postcontroller extends Controller
 {
     public function home() {
         $title = "ReoBlogs";
-        return view('templates.index' , compact('title'));
+        $posts=json_decode(json_encode([
+            ['title' => 'Post 1','content' => 'Content of Post 1'],
+            ['title' => 'Post 2','content' => 'Content of Post 2']
+        ]));
+        return view('templates.index' , compact('title','posts'));
     }
 
     public function detail($id) {
