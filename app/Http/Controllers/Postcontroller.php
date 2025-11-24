@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class Postcontroller extends Controller
 {
     public function home() {
-        return view('templates.index');
+        $title = "ReoBlogs";
+        return view('templates.index' , compact('title'));
     }
 
     public function detail($id) {

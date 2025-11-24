@@ -1,7 +1,7 @@
 <header class="p-3 bg-dark text-white">
         <div class="row">
             <div class="col">
-                <h3>Blog</h3>
+                <h3>{{$title ?? 'BLOG'}}</h3>
             </div>
             <div class="col">
                 <div class="d-flex justify-content-center gap-3">
