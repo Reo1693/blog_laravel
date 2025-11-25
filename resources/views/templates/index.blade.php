@@ -17,30 +17,36 @@
             </div>
         </div>
         <div class="row m-3">
+            @if($posts)
+                @foreach ($posts as $post)
 
-            @foreach ($posts as $post)
-
-                <div class="col-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="https://via.placeholder.com/300" class="img-fluid" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <h5 class="card-title">{{$post->title}}</h5>
-                                    <p class="card-text">{{$post->content}}</p>
-                                    <div class="d-flex justify-content-between">
-                                        <a href="./detail.html">Read More</a>
-                                        <a class="text-decoration-none text-dark fw-bold" href="#">Sports</a>
+                    <div class="col-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/300" class="img-fluid" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5 class="card-title">{{$post->title}}</h5>
+                                        <p class="card-text">{{$post->content}}</p>
+                                        <div class="d-flex justify-content-between">
+                                            <a href="./detail.html">Read More</a>
+                                            <a class="text-decoration-none text-dark fw-bold" href="#">Sports</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-            @endforeach
+                @endforeach
+
+            @else
+            <p>Posts Not Available</p> 
+
+            @endif
+
 
             <div class="col-12 my-3">
                 <nav aria-label="Page navigation">
