@@ -9,8 +9,8 @@ class Postcontroller extends Controller
     public function home() {
         $title = "ReoBlogs";
         $posts=json_decode(json_encode([
-            ['title' => 'Post 1','content' => 'Content of Post 1'],
-            ['title' => 'Post 2','content' => 'Content of Post 2']
+            ['id'=> 1, 'title' => 'Post 1','content' => 'Content of Post 1'],
+            ['id'=> 2, 'title' => 'Post 2','content' => 'Content of Post 2']
         ]));
         return view('templates.index' , compact('title','posts'));
     }

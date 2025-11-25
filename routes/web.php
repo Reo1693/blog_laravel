@@ -9,7 +9,7 @@ Route::get('/test', function () {
 
 Route::get('/', [Postcontroller::class , 'home']);
 
-Route::get('/post/{id}', [PostController::class , 'detail'])->where('id','[0-9]+');
+Route::get('/post/{id}', [PostController::class , 'detail'])->where('id','[0-9]+')->name('detail.post');
 
 Route::get('/old-url' , [Postcontroller::class,'oldUrl' ]);
 
